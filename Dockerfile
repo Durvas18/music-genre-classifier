@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y libsndfile1 ffmpeg && rm -rf /var/lib/a
 COPY requirements.txt .
 
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir --default-timeout=200 tensorflow==2.20.0
 RUN pip install --no-cache-dir --default-timeout=200 -r requirements.txt
 
 COPY . .
